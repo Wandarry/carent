@@ -24,7 +24,7 @@ Route::get('/home', function () {
 })->name('home');
 
 
-Route::get('/login', [UserLoginController::class, "show"])->name("login-user");
+Route::get('/login', [UserLoginController::class, "show"])->name("login");
 Route::post('/login', [UserLoginController::class, 'store']);
-Route::get('register', [UserRegisterController::class, 'show'])->name('register-user');
+Route::get('register', [UserRegisterController::class, 'show'])->name('register');
 Route::post('register', [UserRegisterController::class, 'store']);
