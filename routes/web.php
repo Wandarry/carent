@@ -23,6 +23,7 @@ Route::get('/home', function () {
     return view('main');
 })->name('home');
 
+
 Route::get('/login', [UserLoginController::class, "show"])->name("login-user");
 Route::post('/login', [UserLoginController::class, 'store']);
 Route::get('register', [UserRegisterController::class, 'show'])->name('register-user');
