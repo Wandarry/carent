@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class UserLoginController extends Controller
 {
@@ -22,7 +23,7 @@ class UserLoginController extends Controller
         {
             Auth::login(Auth::user(), true);
 
-            return redirect("/");
+            return redirect("/home");
         }
         return back()->withErrors(["error" => "Bad credentials"]);
     }

@@ -23,6 +23,6 @@ class UserRegisterController extends Controller
         $user = User::create($data);
         Auth::login($user);
 
-        return redirect("/");
+        return redirect("/home");
     }
 }
