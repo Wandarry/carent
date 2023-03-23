@@ -23,7 +23,7 @@ class UserLoginController extends Controller
         {
             Auth::login(Auth::user(), true);
 
-            return redirect("/");
+            return redirect("/home");
         }
         return back()->withErrors(["error" => "Bad credentials"]);
     }
