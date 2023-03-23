@@ -14,7 +14,7 @@
         <script src="https://cdn.tailwindcss.com"></script> -->
         @vite('resources/css/app.css')
     </head>
-    <body class="antialiased bg-red">
+    <body class="antialiased font-poppins">
         @yield("content")
     </body>
 </html>
