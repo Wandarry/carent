@@ -4,7 +4,7 @@
 @section('content')
     <div>
         <!-- navbar -->
-        <div class="flex px-10 py-5 justify-between items-center">
+        <div class="flex px-10 py-5 justify-between items-center bg-gradient-to-r from-white to-pink-100 fixed w-full">
             <div>
                 <a href="/home" class="text-orange-400 font-bold text-2xl tracking-widest">CARENT</a>
             </div>
@@ -33,6 +33,10 @@
                 </div>
             @endguest
 
+        </div>
+
+        <div>
+            @yield('user-content')
         </div>
     </div>
 @endsection
