@@ -28,3 +28,25 @@
         </section>
     </div>
 @endsection
+
+@section('content')
+    <div class = "flex justify-around">
+        <div>
+            <p>CARENT</p>
+        </div>
+
+        <div>
+            <p><a href="./home">Home</a></p>
+            <p><a href=".cars">Cars</a></p>
+            <p><a href="#">My rents</a></p>
+            <p><a href="#">Help</a></p>
+        </div>
+
+        <div>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
+    </div>
+@endsection
