@@ -22,7 +22,6 @@ class CarController extends Controller
      */
     public function create()
     {
-        Log::info("getting car create form");
         return view("admin.content.create-car");
     }
 
@@ -31,6 +30,7 @@ class CarController extends Controller
      */
     public function store(CarRequest $request)
     {
+        Log::info("store");
         $image = $request->file('image')->store('/images');
         Log::info($image);
         $car = Car::create([

@@ -39,7 +39,7 @@ Route::prefix("/admin")->group(function () {
     Route::get('register', [AdminRegisterController::class, 'show'])->name('register');
     Route::post('register', [AdminRegisterController::class, 'store']);
     Route::middleware(['auth', Admin::class])->group(function () {
-        Route::get('/cars/create', [CarController::class, 'create']);
+        Route::get('/cars/create', [CarController::class, 'create'])->name('car-create');
         Route::post('/cars/create', [CarController::class, 'store']);
 
     });

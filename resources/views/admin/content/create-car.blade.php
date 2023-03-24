@@ -4,7 +4,7 @@
     <div>
         <div class="flex h-screen">
             <div class="flex justify-center w-1/3 mx-auto">
-                <form class="w-full text-lg" action="/admin/cars/create" method="post" enctype="multipart/form-data">
+                <form class="w-full text-lg" action="{{route("car-create")}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <h3 class="text-indigo-900 font-bold text-4xl my-5">Add car</h3>
                     <div class="w-full flex gap-5 my-5">
@@ -36,7 +36,7 @@
                     </div>
                     <div class="w-full flex gap-5 my-5">
                         <label for="image">Image</label>
-                        <input type="file" name="image" placeholder="" class="border border-blue-300 focus:outline-none w-full px-3 py-1 rounded-md" id="image" required>
+                        <input type="file" accept="image/*" name="image" placeholder="" class="border border-blue-300 focus:outline-none w-full px-3 py-1 rounded-md" id="image" required>
                     </div>
                     <div class="">
                         <button type="submit" class="bg-orange-400 text-white font-lg px-5 py-1 rounded cursor-pointer">Add</button>
