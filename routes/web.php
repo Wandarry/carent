@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AdminLoginController;
+use App\Http\Controllers\Auth\AdminRegisterController;
 use App\Http\Controllers\Auth\UserLoginController;
 use App\Http\Controllers\Auth\UserRegisterController;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +32,8 @@ Route::get('register', [UserRegisterController::class, 'show'])->name('register'
 Route::post('register', [UserRegisterController::class, 'store']);
 
 Route::prefix("/admin")->group(function () {
-    Route::get("/login", [AdminLoginController::class, 'show']);
+    Route::get("/login", [AdminLoginController::class, 'show'])->name("admin-login");
     Route::post("/login", [AdminLoginController::class, 'store']);
+    Route::get('register', [AdminRegisterController::class, 'show'])->name('register');
+    Route::post('register', [AdminRegisterController::class, 'store']);
 });
