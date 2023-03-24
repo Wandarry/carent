@@ -20,7 +20,7 @@ class AdminLoginController extends Controller
         {
             Auth::login(Auth::user(), true);
 
-            return redirect("/home");
+            return redirect("/admin/cars/create");
         }
         return back()->withErrors(["error" => "Bad credentials"]);
     }
