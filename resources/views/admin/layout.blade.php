@@ -16,15 +16,15 @@
             </div>
 
             @auth
-                <div>
+                <div class="flex justify-between gap-5">
                     <div>
-                        <a href="/admin/car/create" class="text-white">
+                        <a href="/admin/car/create" class="block text-lg text-white border border-orange-400 bg-orange-500 px-5 py-1 rounded-lg">
                             Add car
                         </a>
                     </div>
                     <form action="/logout" method="post">
                         @csrf
-                        <button class="text-orange-400 font-bold text-lg px-5 py-1 border rounded-lg border-orange-400 transition hover:text-white hover:bg-orange-400">Logout</button>
+                        <button class="text-orange-400 text-lg px-5 py-1 border rounded-lg border-orange-400 transition hover:text-white hover:bg-orange-400">Logout</button>
                     </form>
                 </div>
             @endauth
@@ -39,7 +39,7 @@
         </div>
 
         <div>
-            @yield('user-content')
+            @yield('admin-content')
         </div>
     </div>
 @endsection

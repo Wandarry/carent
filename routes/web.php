@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\Auth\AdminRegisterController;
 use App\Http\Controllers\Auth\UserLoginController;
 use App\Http\Controllers\Auth\UserRegisterController;
+use App\Http\Middleware\Admin;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,4 +37,9 @@ Route::prefix("/admin")->group(function () {
     Route::post("/login", [AdminLoginController::class, 'store']);
     Route::get('register', [AdminRegisterController::class, 'show'])->name('register');
     Route::post('register', [AdminRegisterController::class, 'store']);
+    Route::middleware(['auth', Admin::class])->group(function () {
+        Route::get('/home', function () {
+            return view('admin.content.home');
+        })->name('admin-home');
+    });
 });
