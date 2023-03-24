@@ -13,6 +13,9 @@
         <!-- Styles
         <script src="https://cdn.tailwindcss.com"></script> -->
         @vite('resources/css/app.css')
+
+        <! --Icons -->
+        @bukStyles
     </head>
     <body class="antialiased font-poppins">
         @yield("content")
